@@ -8,7 +8,7 @@ function Header(props) {
     return (
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-center gap-2'>
-                <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400'>{index}</p>
+                <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-orange-400'>{index}</p>
                 <h4 className='text-xl sm:text-2xl md:text-3xl'>{title}</h4>
             </div>
             <p className='text-sm sm:text-base mx-auto'>{description}</p>
@@ -58,7 +58,7 @@ export default function Generator(props) {
                         <button onClick={() => {
                             setMuscles([])
                             setPoison(type)
-                        }} className={'bg-slate-950 border  duration-200 px-4 hover:border-blue-200 py-3 rounded-lg ' + (type === poison ? ' border-blue-600' : ' border-blue-400')} key={typeIndex}>
+                        }} className={'bg-slate-950 border  duration-200 px-4 hover:border-blue-200 py-3 rounded-lg ' + (type === poison ? ' border-orange-600' : ' border-blue-400')} key={typeIndex}>
                             <p className='capitalize'>{type.replaceAll('_', " ")}</p>
                         </button>
                     )
@@ -76,7 +76,7 @@ export default function Generator(props) {
                             return (
                                 <button onClick={() => {
                                     updateMuscles(muscleGroup)
-                                }} key={muscleGroupIndex} className={'hover:text-blue-400 duration-200 ' + (muscles.includes(muscleGroup) ? ' text-blue-400' : ' ')}>
+                                }} key={muscleGroupIndex} className={'hover:text-orange-400 duration-200 ' + (muscles.includes(muscleGroup) ? ' text-orange-400' : ' ')}>
                                     <p className='uppercase'>{muscleGroup.replaceAll('_', ' ')}</p>
                                 </button>
                             )
@@ -90,7 +90,7 @@ export default function Generator(props) {
                     return (
                         <button onClick={() => {
                             setGoal(scheme)
-                        }} className={'bg-slate-950 border  duration-200 hover:border-blue-200 py-3 rounded-lg px-4 ' + (scheme === goal ? ' border-blue-600' : ' border-blue-400')} key={schemeIndex}>
+                        }} className={'bg-slate-950 border  duration-200 hover:border-blue-200 py-3 rounded-lg px-4 ' + (scheme === goal ? ' border-orange-600' : ' border-blue-400')} key={schemeIndex}>
                             <p className='capitalize'>{scheme.replaceAll('_', " ")}</p>
                         </button>
                     )
